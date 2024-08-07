@@ -25,6 +25,8 @@ public:
 
         auto& transform = GetComponent<TransformComponent>();
 
+        MoveTransformPosition(transform, -GetTransformForward(transform) * 5.0f * _dt);
+        
         LookAt(
             transform,
             GetGlobalPosition(target.GetComponent<TransformComponent>()),

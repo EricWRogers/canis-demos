@@ -1,4 +1,9 @@
-#version 330 core
+[OPENGL VERSION]
+
+#ifdef GL_ES
+    precision mediump float;
+#endif
+
 layout (location = 0) in vec4 vertex; // <vec2 pos, vec2 tex>
 out vec2 TexCoords;
 

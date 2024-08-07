@@ -1,4 +1,8 @@
-#version 330 core
+[OPENGL VERSION]
+
+#ifdef GL_ES
+    precision mediump float;
+#endif
 
 void main()
 {             

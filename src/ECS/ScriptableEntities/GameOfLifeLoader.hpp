@@ -40,7 +40,7 @@ public:
                 Canis::ColorComponent color = {};
                 Canis::Sprite2DComponent sprite = {};
                 sprite.uv = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
-                sprite.texture = Canis::AssetManager::GetTexture("assets/textures/box.png")->GetTexture();
+                sprite.textureHandle = Canis::AssetManager::GetTextureHandle("assets/textures/box.png");
 
                 GameOfLifeComponent gameOfLife = {};
                 gameOfLife.currentState = false;

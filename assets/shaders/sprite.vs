@@ -1,4 +1,8 @@
-#version 330 core
+[OPENGL VERSION]
+
+#ifdef GL_ES
+    precision mediump float;
+#endif
 
 in vec3 vertexPosition;
 in vec4 vertexColor;
@@ -9,6 +13,7 @@ out vec4 fragmentColor;
 out vec2 fragmentUV;
 
 uniform mat4 P;
+uniform float TIME;
 
 void main()
 {
