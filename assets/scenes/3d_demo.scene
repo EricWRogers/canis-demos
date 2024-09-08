@@ -5,21 +5,23 @@ RenderSystems:
   - Canis::RenderMeshSystem
   - Canis::RenderHUDSystem
 Entities:
-  - 0:
+  - Entity: 1
+    Name: Spawner
     Canis::TransformComponent:
       active: true
       position: [0.5, 0.5, 0.5]
-      rotation: [0.5, 0.5, 0.5]
+      rotation: [0.0, 0.0, 0.0, 0.0]
       scale: [1.0, 1.0, 1.0]
     Canis::DirectionalLightComponent:
       ambient: [0.1, 0.1, 0.1]
       diffuse: [0.961, 0.953, 0.863]
       specular: [0.6, 0.6, 0.6]
     Canis::ScriptComponent: SpawnCube
-  - 1:
+  - Entity: 2
+    Name: FlyCam
     Canis::TransformComponent:
       active: true
       position: [0.0, 0.0, 0.0]
-      rotation: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0, 0.0]
       scale: [1.0, 1.0, 1.0]
     Canis::ScriptComponent: FlyCam

@@ -40,26 +40,16 @@ int main(int argc, char* argv[])
     app.AddDecodeRenderSystem(Canis::DecodeRenderMeshSystem);
 
     // decode scriptable entities
-    app.AddDecodeScriptableEntity(DecodeDebugCamera2D);
-    app.AddDecodeScriptableEntity(DecodeBeachBall);
-    app.AddDecodeScriptableEntity(DecodeGameOfLifeLoader);
-    app.AddDecodeScriptableEntity(DecodeSpawnCube);
-    app.AddDecodeScriptableEntity(DecodeFlyCam);
-    app.AddDecodeScriptableEntity(DecodeFPSCounter);
+    REGISTER_SCRIPTABLE_COMPONENT(app, DebugCamera2D);
+    REGISTER_SCRIPTABLE_COMPONENT(app, BeachBall);
+    REGISTER_SCRIPTABLE_COMPONENT(app, GameOfLifeLoader);
+    REGISTER_SCRIPTABLE_COMPONENT(app, SpawnCube);
+    REGISTER_SCRIPTABLE_COMPONENT(app, FlyCam);
+    REGISTER_SCRIPTABLE_COMPONENT(app, FPSCounter);
 
-    // decode component
-    app.AddDecodeComponent(Canis::DecodeTransformComponent);
-    app.AddDecodeComponent(Canis::DecodeDirectionalLightComponent);
-    app.AddDecodeComponent(Canis::DecodeTagComponent);
-    app.AddDecodeComponent(Canis::DecodeCamera2DComponent);
-    app.AddDecodeComponent(Canis::DecodeRectTransformComponent);
-    app.AddDecodeComponent(Canis::DecodeColorComponent);
-    app.AddDecodeComponent(Canis::DecodeTextComponent);
-    app.AddDecodeComponent(Canis::DecodeSprite2DComponent);
-    app.AddDecodeComponent(Canis::DecodeUIImageComponent);
-    app.AddDecodeComponent(Canis::DecodeUISliderComponent);
-    app.AddDecodeComponent(Canis::DecodeSpriteAnimationComponent);
-    app.AddDecodeComponent(Canis::DecodeCircleColliderComponent);
+    // encode / decode component
+    REGISTER_COMPONENT(app, Canis::TransformComponent);
+    REGISTER_COMPONENT(app, Canis::DirectionalLightComponent);
 
     REGISTER_COMPONENT_EDITOR(Canis::TagComponent);
     REGISTER_COMPONENT_EDITOR(Canis::TransformComponent);
