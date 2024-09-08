@@ -8,5 +8,10 @@ seed 0
 volume-can-range-from-0.0-1.5
 volume 1.0
 log true
-editor false
+editor true
 vsync false
+
+splash_scene------
+scene assets/scenes/3d_demo.scene
+
+run_scene 3d_demo

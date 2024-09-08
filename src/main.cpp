@@ -61,11 +61,11 @@ int main(int argc, char* argv[])
     app.AddDecodeComponent(Canis::DecodeSpriteAnimationComponent);
     app.AddDecodeComponent(Canis::DecodeCircleColliderComponent);
 
-    //app.AddScene(new Canis::Scene("sprite_demo", "assets/scenes/sprite_demo.scene"));
-    //app.AddScene(new Canis::Scene("game_of_life", "assets/scenes/game_of_life.scene"));
-    app.AddScene(new Canis::Scene("3d_demo", "assets/scenes/3d_demo.scene"));
+    REGISTER_COMPONENT_EDITOR(Canis::TagComponent);
+    REGISTER_COMPONENT_EDITOR(Canis::TransformComponent);
+    REGISTER_COMPONENT_EDITOR(Canis::RectTransformComponent);
 
-    app.Run("Canis Demos", "3d_demo");
+    app.Run("Canis Demos");
 
     return 0;
 }
