@@ -13,6 +13,7 @@ private:
     float       m_countDown = 0.0f;
     unsigned int m_animIndex = 0;
     std::vector<glm::vec2> m_spawnPoints = {};
+    
 public:
     void OnCreate()
     {

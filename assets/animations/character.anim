@@ -11,7 +11,7 @@ Animation:
     offset: [0, 0]
     index: [1, 0]
     size: [48, 50]
-  - 1:
+  - 2:
     timeOnFrame: 0.1
     textureAssetId: "assets/textures/All.png"
     offset: [0, 0]
